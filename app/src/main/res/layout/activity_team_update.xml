@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/parent"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  android:clickable="true"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+  tools:context=".Activities.TeamUpdateActivity">
+
+  <androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    android:background="@color/light_sky_blue"
+    android:elevation="2dp">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:focusable="true"
+      android:orientation="horizontal">
+      <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="center_vertical"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:tint="@color/white"/>
+      <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="Team"
+        android:textAlignment="gravity"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+    </LinearLayout>
+  </androidx.appcompat.widget.Toolbar>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/toolbar"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/team_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="10dp"
+        android:focusable="true"
+        android:textColor="@color/black"
+        android:textSize="24sp"/>
+
+      <TextView
+        android:id="@+id/team_college"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:focusable="true"
+        android:textColor="@color/cornflower_blue"
+        android:textSize="16sp"/>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="4dp"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+          android:id="@+id/score_heading"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="7"
+          android:layout_marginStart="4dp"
+          android:paddingStart="10dp"
+          android:paddingEnd="10dp"
+          android:focusable="true"
+          android:text="Score"
+          android:textColor="@color/goldenrod"
+          android:textSize="18sp"/>
+
+        <EditText
+          android:id="@+id/team_score"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="2"
+          android:enabled="false"
+          android:focusable="true"
+          android:inputType="number"
+          android:maxLines="1"
+          android:textAlignment="viewEnd"
+          android:textColor="@color/goldenrod"
+          android:textSize="18sp"/>
+
+        <ImageView
+          android:id="@+id/score_update_button"
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:background="?android:attr/selectableItemBackground"
+          android:clickable="true"
+          android:focusable="true"
+          android:scaleType="centerInside"
+          android:src="@drawable/ic_edit_black_24dp"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <Button
+          android:id="@+id/approve_button"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:layout_marginBottom="5dp"
+          android:layout_marginStart="10dp"
+          android:layout_marginEnd="10dp"
+          android:backgroundTint="@color/spring_green"
+          android:text="Approve"
+          android:textAllCaps="false"
+          android:textColor="@color/white"/>
+
+        <Button
+          android:id="@+id/reject_button"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:layout_marginBottom="5dp"
+          android:layout_marginStart="10dp"
+          android:layout_marginEnd="10dp"
+          android:backgroundTint="@color/indian_red"
+          android:text="Delete"
+          android:textAllCaps="false"
+          android:textColor="@color/white"/>
+
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="10dp"
+        android:focusable="true"
+        android:text="Team Memebers"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/team_members_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"/>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:focusable="true"
+        android:text="Status"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+      <TextView
+        android:id="@+id/team_document_color_codes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:focusable="true"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/team_documents_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"/>
+
+    </LinearLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="20dp"
+      android:orientation="vertical">
+
+      <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:src="@drawable/suvclogo_1"
+        android:transitionName="logo"/>
+
+
+      <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/team_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Team Name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="16sp"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Team Name"
+        app:met_textColor="@color/black"
+        app:met_underlineColor="@color/gray"/>
+
+
+      <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/team_college"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter College Name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="16sp"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="College Name"
+        app:met_textColor="@color/black"
+        app:met_underlineColor="@color/gray"/>
+
+      <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter username"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="16sp"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Username"
+        app:met_textColor="@color/black"
+        app:met_underlineColor="@color/gray"/>
+
+      <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your First Name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="16sp"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="First Name"
+        app:met_textColor="@color/black"
+        app:met_underlineColor="@color/gray"/>
+
+      <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your Last Name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="16sp"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Last Name"
+        app:met_textColor="@color/black"
+        app:met_underlineColor="@color/gray"/>
+
+      <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/email_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter email address"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="16sp"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Email"
+        app:met_textColor="@color/black"
+        app:met_underlineColor="@color/gray"/>
+
+      <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Contact Number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="16sp"
+        android:inputType="number"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Contact no."
+        app:met_textColor="@color/black"
+        app:met_underlineColor="@color/gray"/>
+
+      <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/user_pass1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your Password"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="16sp"
+        app:met_clearButton="true"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Password"
+        app:met_textColor="@color/black"
+        app:met_underlineColor="@color/gray"/>
+
+      <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/user_pass2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Re-Enter your Password"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="16sp"
+        app:met_clearButton="true"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Confirm password"
+        app:met_textColor="@color/black"
+        app:met_underlineColor="@color/gray"/>
+
+      <Button
+        android:id="@+id/register_btn"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+      android:id="@+id/progressBar"
+      android:visibility="invisible"
+      android:progressTint="@color/colorPrimary"
+      android:layout_centerInParent="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+
+  </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  tools:context=".Activities.UserPageActiivity">
+
+  <androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    android:background="@color/light_sky_blue"
+    android:elevation="2dp">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:text="Teams"
+        android:textAlignment="gravity"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+
+      <ImageView
+        android:id="@+id/notification_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/menu_button"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:src="@drawable/ic_notifications_black_24dp"
+        android:tint="@color/white"/>
+
+      <ImageView
+        android:id="@+id/menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_more_vert_black_24dp"
+        android:tint="@color/white"/>
+
+    </RelativeLayout>
+
+  </androidx.appcompat.widget.Toolbar>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/toolbar">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/team_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="10dp"
+        android:focusable="true"
+        android:text="Team Name"
+        android:textColor="@color/black"
+        android:textSize="24sp"/>
+
+      <TextView
+        android:id="@+id/team_college"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:focusable="true"
+        android:text="Team College"
+        android:textColor="@color/cornflower_blue"
+        android:textSize="16sp"/>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="4dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+          android:id="@+id/score_heading"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="7"
+          android:layout_marginStart="4dp"
+          android:paddingStart="10dp"
+          android:paddingEnd="10dp"
+          android:focusable="true"
+          android:text="Score"
+          android:textColor="@color/goldenrod"
+          android:textSize="18sp"/>
+
+        <TextView
+          android:id="@+id/team_score"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="3"
+          android:enabled="false"
+          android:maxLines="1"
+          android:textColor="@color/goldenrod"
+          android:textSize="18sp"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/expandable_layout_toggle1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:background="@color/white_smoke"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="9"
+          android:text="Members"
+          android:textColor="@color/black"
+          android:textSize="18sp"/>
+
+        <ImageView
+          android:id="@+id/arrow_icon1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:src="@drawable/ic_keyboard_arrow_up_black_24dp"/>
+
+      </LinearLayout>
+
+      <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/members_expandable_layout"
+        app:el_expanded="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/team_members_recyclerView"
+          android:paddingStart="10dp"
+          android:paddingEnd="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:nestedScrollingEnabled="false">
+        </androidx.recyclerview.widget.RecyclerView>
+
+      </net.cachapa.expandablelayout.ExpandableLayout>
+
+      <LinearLayout
+        android:id="@+id/expandable_layout_toggle2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:animateLayoutChanges="true"
+        android:layout_weight="10"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:background="@color/white_smoke"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="9"
+          android:text="Status"
+          android:textColor="@color/black"
+          android:textSize="18sp"/>
+
+        <ImageView
+          android:id="@+id/arrow_icon2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:src="@drawable/ic_keyboard_arrow_up_black_24dp"/>
+
+      </LinearLayout>
+
+      <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/documents_expandable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:el_expanded="true">
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+          <TextView
+            android:id="@+id/team_document_color_codes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:focusable="true"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+
+          <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/team_documents_recyclerView"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false">
+          </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+      </net.cachapa.expandablelayout.ExpandableLayout>
+
+    </LinearLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/addMemberBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:clickable="true"
+    app:backgroundTint="@color/floral_white"
+    app:srcCompat="@drawable/ic_add_black_24dp"/>
+
+
+</RelativeLayout>

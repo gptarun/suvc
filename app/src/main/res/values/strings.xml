@@ -1,0 +1,15 @@
+<resources>
+  <string name="app_name">SUVC</string>
+  <string name="title_activity_test">test</string>
+  <string name="title_activity_main2">Main2Activity</string>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="edit"><u>Edit</u></string>
+  <string name="about_us">Saur Urja Vehicle Challenge (SUVC) is an attempt to endorse renewable sources of energy for nourishing our planet back to its glory. It is a National-level solar and electric car racing event organized by government registered Refrangible Society (RSTE). You can support us and win exciting rewards by participating in this challenge as a team of a maximum of 40 members for a 5-day event using a self-designed and self-developed vehicle as per the rulebook provided by SUVC.</string>
+  <string name="about_us_1"><u>About Us</u></string>
+  <string-array name="roles">
+    <item>Admin</item>
+    <item>Member</item>
+  </string-array>
+</resources>

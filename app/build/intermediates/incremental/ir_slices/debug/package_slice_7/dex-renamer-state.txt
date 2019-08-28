@@ -1,0 +1,4 @@
+#Sat Aug 10 14:24:06 IST 2019
+base.0=H\:\\SUVC\\suvc\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\7
+path.0=classes.dex
+renamed.0=classes.dex

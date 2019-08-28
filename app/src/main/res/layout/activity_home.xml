@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/contentLoadingProgressBar"
+        app:layout_constraintStart_toStartOf="@+id/contentLoadingProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/contentLoadingProgressBar">
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/contentLoadingProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="134dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="27dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="75"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:secondaryProgress="100"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toEndOf="@+id/home_teamName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </androidx.core.widget.ContentLoadingProgressBar>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_scoreBoard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="36dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/home_teamName"
+            app:layout_constraintTop_toBottomOf="@+id/home_score" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_score"
+            android:layout_width="52dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="34dp"
+            android:text="Score: "
+            app:layout_constraintBottom_toTopOf="@+id/home_scoreBoard"
+            app:layout_constraintEnd_toEndOf="@+id/contentLoadingProgressBar"
+            app:layout_constraintHorizontal_bias="0.597"
+            app:layout_constraintStart_toStartOf="@+id/contentLoadingProgressBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.365" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_teamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="147dp"
+            android:layout_marginBottom="48dp"
+            android:baselineAligned="false"
+            android:text="Welcome Team!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/home_scoreBoard"
+            app:layout_constraintHorizontal_bias="0.087"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_conversion_absoluteWidth="103dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:textSize="18dp"
+        android:text="Team Members!"/>
+
+    <ScrollView
+        android:id="@+id/home_scroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/home_linearLayout"/>
+    </ScrollView>
+
+</LinearLayout>
